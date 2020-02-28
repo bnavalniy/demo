@@ -9,7 +9,12 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
-        int result = applicationContext.getBean(BinarySearchImpl.class).binarySearch(new int[]{12, 4, 6}, 3);
+        BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+        BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
+
+        System.out.println(binarySearch);
+        System.out.println(binarySearch1);
+        int result = binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
 
         System.out.println(result);
     }
