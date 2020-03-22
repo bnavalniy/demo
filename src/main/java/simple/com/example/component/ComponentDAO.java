@@ -1,4 +1,4 @@
-package component;
+package simple.com.example.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
